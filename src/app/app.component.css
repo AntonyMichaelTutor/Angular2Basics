@@ -1,0 +1,10 @@
+#link{
+    float: left;
+    width: 20%;
+    height: 100%;
+}
+#content{
+    float: left;
+    width: 70%;
+    height: 100%;
+}
