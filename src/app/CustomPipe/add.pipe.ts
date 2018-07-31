@@ -10,6 +10,6 @@ import {
  export class AddPipe implements PipeTransform { 
     transform(value: number, add: string): number { 
        let mul = parseFloat(add); 
-       return mul + value 
+       return mul * value 
     } 
  } 

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: '<p>Add: {{2 | AddCustomPipe: 10}}</p>' 
+  template: '<p>Add: {{25 | AddCustomPipe: 10}}</p>' 
  
 })
 export class CustomPipe {
