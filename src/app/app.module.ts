@@ -10,7 +10,7 @@ import { FormsModule }   from '@angular/forms';
 import {PipeComponent} from './Pipe/pipe.component';
 import {CustomDirectiveComponent} from './CustomDirective/CustomDirective.component';
 import {FontcolorDirective,FontcolorDirective1} from './CustomDirective/fontcolor.directive';
-import {AnimationComponent} from './AnimationComponent/animation.component';
+
 
 
 const appRoutes: Routes = [
@@ -18,8 +18,7 @@ const appRoutes: Routes = [
   { path: 'CustomDataBinding',component: CustomDataBinding },
   { path: 'CustomPipe',component: CustomPipe },
   { path: 'PipeComponent',component: PipeComponent },
-  { path: 'CustomDirectiveComponent',component: CustomDirectiveComponent },
-  { path: 'AnimationComponent',component: AnimationComponent }
+  { path: 'CustomDirectiveComponent',component: CustomDirectiveComponent }
    //{ path: '**', component: PageNotFoundComponent }
 ];
 
@@ -30,7 +29,7 @@ const appRoutes: Routes = [
   ],
   declarations: [
     AppComponent,DataBinding,CustomDataBinding,CustomPipe,AddPipe,
-    PipeComponent,CustomDirectiveComponent,FontcolorDirective,FontcolorDirective1,AnimationComponent],
+    PipeComponent,CustomDirectiveComponent,FontcolorDirective,FontcolorDirective1],
     providers: [],
   bootstrap: [AppComponent]
 })
