@@ -50,38 +50,4 @@ export class ReactiveFormComponent implements OnInit {
     });
     console.warn(this.profileForm1.value);
   }
-
-  profileForm2 = new FormGroup({
-    firstName3: new FormControl(''),
-    lastName3: new FormControl(''),
-    address3: new FormGroup({
-      street3: new FormControl(''),
-      city3: new FormControl(''),
-      state3: new FormControl(''),
-      zip3: new FormControl('')
-    })
-  });
-  
-
-  get aliases() {
-    return this.profileForm2.get('aliases') as FormArray;
-  }
-
-  addAlias() {
-    this.profileForm2 = this.fb.group({
-      firstName3: ['', Validators.required],
-      lastName3: [''],
-      address3: this.fb.group({
-        street3: [''],
-        city3: [''],
-        state3: [''],
-        zip3: ['']
-      }),
-      aliases: this.fb.array([
-        this.fb.control('')
-      ])
-    });
-    this.aliases.push(this.fb.control(''));
-  }
-  
 }
