@@ -16,7 +16,7 @@ export class ObservablesComponent implements OnInit {
 
   
   mathform: FormGroup;
-  inputnumber :FormControl
+  inputnumber :FormControl;
   squaredata:number;
   processed=false;
 
