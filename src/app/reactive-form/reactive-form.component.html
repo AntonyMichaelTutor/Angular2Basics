@@ -1,0 +1,63 @@
+<h1> Example  For From control</h1>
+<label>
+  Name:
+  <input type="text" [formControl]="name"> Value: {{ name.value }}
+  <p>
+    <button (click)="updateName()">Set Name</button>
+  </p>
+</label>
+
+
+<h1> Example  For From Group</h1>
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <label>
+    First Name:
+    <input type="text" formControlName="firstName">
+  </label>
+  <br><label>
+    Last Name:
+    <input type="text" formControlName="lastName">
+  </label>
+  <br><button type="submit">Submit</button>
+</form>
+
+
+<h1>Creating nested form groups</h1>
+<form [formGroup]="profileForm1" (ngSubmit)="onSubmit1()">
+  <label>
+    First Name:
+    <input type="text" formControlName="firstName1"><p>
+      Form Status: {{ profileForm1.status }}
+    </p>
+  </label>
+  <br><label>
+    Last Name:
+    <input type="text" formControlName="lastName1">
+  </label>
+<div formGroupName="address1">
+  <h3>Address</h3>
+
+  <br><label>
+    Street:
+    <input type="text" formControlName="street1">
+  </label>
+
+  <br><label>
+    City:
+    <input type="text" formControlName="city1">
+  </label>
+  
+  <br><label>
+    State:
+    <input type="text" formControlName="state1">
+  </label>
+
+  <br><label>
+    Zip Code:
+    <input type="text" formControlName="zip1">
+  </label>
+</div>
+<br><button type="submit" [disabled]="!profileForm1.valid">Submit</button>
+</form>
+
+
