@@ -56,10 +56,10 @@ start(){
             {
                 observer.next('Orannge');
             }, 3000);
-            /*setTimeout(() => 
+            setTimeout(() => 
             {
                 observer.error(new Error('error occured'));
-            }, 4000);*/
+            }, 4000);
             setTimeout(() => 
             {
                 observer.complete();
