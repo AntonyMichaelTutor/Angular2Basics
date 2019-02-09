@@ -2,9 +2,6 @@
 <label>
   Name:
   <input type="text" [formControl]="name"> Value: {{ name.value }}
-  <p>
-    <button (click)="updateName()">Set Name</button>
-  </p>
 </label>
 
 
@@ -26,7 +23,7 @@
 <form [formGroup]="profileForm1" (ngSubmit)="onSubmit1()">
   <label>
     First Name:
-    <input type="text" formControlName="firstName1"><p>
+    <input type="text" formControlName="firstName1" (keypress)="activate()"><p>
       Form Status: {{ profileForm1.status }}
     </p>
   </label>
@@ -57,7 +54,11 @@
     <input type="text" formControlName="zip1">
   </label>
 </div>
-<br><button type="submit" [disabled]="!profileForm1.valid">Submit</button>
+<br><button type="submit" *ngIf="!profileForm1.valid || dummy" [disabled]="!profileForm1.valid">Submit</button>
+
+
+
 </form>
 
+{{profileForm1.value | json}}
 

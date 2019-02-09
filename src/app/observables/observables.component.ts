@@ -31,8 +31,8 @@ this.inputnumber=new FormControl();
   
   
 
-    this.inputnumber.valueChanges.map(n=>n*n)
-    .subscribe(power=>this.squaredata=power);
+    this.inputnumber.valueChanges.map(valueN=>valueN*valueN)
+    .subscribe(powerStart=>this.squaredata=powerStart);
 
   };
 ngOnInit(){
@@ -62,7 +62,7 @@ start(){
             }, 4000);
             setTimeout(() => 
             {
-                observer.complete();
+                observer.next();
             }, 5000);
             
    }

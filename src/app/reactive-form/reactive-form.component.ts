@@ -9,22 +9,23 @@ import { Validators } from '@angular/forms';
 export class ReactiveFormComponent implements OnInit {
 
   name = new FormControl('');
+  dummy:boolean = false;
   constructor(private fb: FormBuilder) { }
-
+  activate(){
+    this.dummy = true;
+  }
   ngOnInit() {
     
   }
 
-  updateName() {
-    this.name.setValue('Mike');
-  }
+  
   profileForm = new FormGroup({
     firstName: new FormControl(''),
     lastName: new FormControl(''),
   });
   onSubmit() {
     // TODO: Use EventEmitter with form value
-    console.warn(this.profileForm.value);
+    console.log(this.profileForm.value);
   }
   profileForm1 = new FormGroup({
     firstName1: new FormControl(''),
@@ -37,17 +38,7 @@ export class ReactiveFormComponent implements OnInit {
     })
   });
   onSubmit1() {
-    // TODO: Use EventEmitter with form value
-    this.profileForm1 = this.fb.group({
-      firstName1: ['', Validators.required],
-      lastName1: [''],
-      address1: this.fb.group({
-        street1: [''],
-        city1: [''],
-        state1: [''],
-        zip1: ['']
-      }),
-    });
+    
     console.warn(this.profileForm1.value);
   }
 }

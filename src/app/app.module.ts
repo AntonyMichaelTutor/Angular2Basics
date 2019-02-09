@@ -12,7 +12,8 @@ import {CustomDirectiveComponent} from './CustomDirective/CustomDirective.compon
 import {FontcolorDirective,FontcolorDirective1} from './CustomDirective/fontcolor.directive';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { TemplateDriveFormComponent } from './template-drive-form/template-drive-form.component';
-import { ObservablesComponent } from './observables/observables.component'
+import { ObservablesComponent } from './observables/observables.component';
+import { DependencyInjectionComponent } from './dependency-injection/dependency-injection.component'
 
 
 const appRoutes: Routes = [
@@ -23,7 +24,8 @@ const appRoutes: Routes = [
   { path: 'CustomDirectiveComponent',component: CustomDirectiveComponent },
   { path: 'ReactiveForm',component: ReactiveFormComponent },
   { path: 'TemplateDriveForm',component: TemplateDriveFormComponent },
-  { path: 'Observables',component: ObservablesComponent }
+  { path: 'Observables',component: ObservablesComponent },
+  { path: 'DependencyInjection',component: DependencyInjectionComponent }
    //{ path: '**', component: PageNotFoundComponent }
 ];
 
@@ -34,7 +36,7 @@ const appRoutes: Routes = [
   ],
   declarations: [
     AppComponent,DataBinding,CustomDataBinding,CustomPipe,AddPipe,
-    PipeComponent,CustomDirectiveComponent,FontcolorDirective,FontcolorDirective1, ReactiveFormComponent,TemplateDriveFormComponent, ObservablesComponent],
+    PipeComponent,CustomDirectiveComponent,FontcolorDirective,FontcolorDirective1, ReactiveFormComponent,TemplateDriveFormComponent, ObservablesComponent, DependencyInjectionComponent],
     providers: [],
   bootstrap: [AppComponent]
 })
