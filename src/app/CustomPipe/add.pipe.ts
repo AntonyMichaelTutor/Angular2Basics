@@ -1,7 +1,4 @@
-import { 
-    Pipe, 
-    PipeTransform 
- } from '@angular/core';  
+import {Pipe,PipeTransform } from '@angular/core';  
  
  @Pipe ({ 
     name: 'AddCustomPipe' 
@@ -10,6 +7,6 @@ import {
  export class AddPipe implements PipeTransform { 
     transform(value: number, add: string): number { 
        let mul = parseFloat(add); 
-       return mul * value 
+       return mul + value 
     } 
  } 

@@ -13,7 +13,8 @@ import {FontcolorDirective,FontcolorDirective1} from './CustomDirective/fontcolo
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { TemplateDriveFormComponent } from './template-drive-form/template-drive-form.component';
 import { ObservablesComponent } from './observables/observables.component';
-import { DependencyInjectionComponent } from './dependency-injection/dependency-injection.component'
+import { DependencyInjectionComponent } from './dependency-injection/dependency-injection.component';
+import { MulPipe } from './CustomPipe/mul.pipe'
 
 
 const appRoutes: Routes = [
@@ -36,7 +37,7 @@ const appRoutes: Routes = [
   ],
   declarations: [
     AppComponent,DataBinding,CustomDataBinding,CustomPipe,AddPipe,
-    PipeComponent,CustomDirectiveComponent,FontcolorDirective,FontcolorDirective1, ReactiveFormComponent,TemplateDriveFormComponent, ObservablesComponent, DependencyInjectionComponent],
+    PipeComponent,CustomDirectiveComponent,FontcolorDirective,FontcolorDirective1, ReactiveFormComponent,TemplateDriveFormComponent, ObservablesComponent, DependencyInjectionComponent, MulPipe],
     providers: [],
   bootstrap: [AppComponent]
 })

@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: '<p>mul: {{25 | AddCustomPipe: 10}}</p>' 
+  templateUrl: 'custom.html' 
  
 })
 export class CustomPipe {
   title = 'app';
   name ="TitleCase";
-
+  input = 0;
+  input1 = 0;
 }
